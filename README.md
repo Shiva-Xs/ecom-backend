@@ -213,6 +213,18 @@ Inspect the live database at **`http://localhost:8080/h2-console`**
 | Password | *(leave blank)* |
 
 
+### Design Tradeoffs
+
+To keep the project simple and focused on learning:
+
+- Entities are returned directly instead of DTOs (would be separated in production)
+- Images are stored in the database (production systems use object storage like S3)
+- Search uses JPQL with LIKE (not optimized for large datasets)
+- No authentication layer (would use Spring Security + JWT in production)
+
+These tradeoffs keep the code easy to follow while still demonstrating real backend patterns.
+
+
 ## Room for Improvements
 
 This project is intentionally scoped as a learning reference — a clean foundation for understanding Spring Boot's layered architecture. Here is what a production version would look like, roughly in order of impact.
