@@ -1,0 +1,18 @@
+# Copy this file to application.properties and fill in your values.
+# application.properties is listed in .gitignore and will NOT be committed.
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+spring.h2.console.settings.web-allow-others=false
+
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+# Multipart upload limits — must match the error message in GlobalExceptionHandler
+spring.servlet.multipart.max-file-size=20MB
+spring.servlet.multipart.max-request-size=20MB
